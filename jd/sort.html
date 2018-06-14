@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东分类</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-3.3.4-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-4.2.6.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="sort">
+
+<div class="ad">
+    <div><span id="guanbi">X</span><p>点击打开京东APP购物</p><a href="">立即打开</a></div>
+</div>
+    <!--   导航-->
+   
+    <nav>
+        <ul>
+            <li><a href="home.html"><i class="fa fa-home"></i><span>首页</span></a></li>
+            <li class="active"<a href="sort.html"><i class="fa fa-list"></i><span>分类</span></a></li>
+            <li><a href=""><i class="fa fa-clock-o"><i class="hot"></i></i><span>觅Me</span></a></li>
+            <li><a href=""><i class="fa fa-shopping-cart"></i><span>购物车</span></a></li>
+            <li><a href=""><i class="fa fa-user-o"></i><span>我的</span></a></li>
+        </ul>
+    </nav>
+<!--   搜索条-->
+
+    <div class="search">
+        <div class="left">
+            <i class="fa fa-qrcode"></i>
+            <span>扫阿扫</span>
+        </div>
+        <div class="center">
+            <i class="fa fa-search"></i>
+            <i class="fa fa-microphone"></i>
+            <input type="text" placeholder="华为荣耀8">
+        </div>
+        <div class="right">
+            <i class="fa fa-commenting-o"></i>
+            <span>消息</span>
+        </div>
+    </div>
+    
+<div class="main">
+    <div class="row">
+        <div class="col-xs-3">
+            <ul>
+                <li class="active">热门推荐</li>
+                <li>手机数码</li>
+                <li>家用电器</li>
+                <li>电脑办公</li>
+                <li>计生情趣</li>
+                <li>美妆护肤</li>
+                <li>个护清洁</li>
+                <li>汽车用品</li>
+                <li>京东超市</li>
+                <li>男装</li>
+                <li>男鞋</li>
+                <li>女装</li>
+                <li>女鞋</li>
+                <li>母婴童装</li>
+                <li>户外运动</li>
+                <li>内衣配饰</li>
+                <li>食品生鲜</li>
+                <li>家居家装</li>
+                <li>箱包手袋</li>
+                <li>钟表珠宝</li>
+                <li>图书音像</li>
+                <li>医药保健</li>
+                <li>宠物生活</li>
+                <li>礼品鲜花</li>
+                <li>农资绿植</li>
+                <li>生活旅行</li>
+                <li>奢侈品</li>
+                <li>全球购</li>
+                <li>艺术邮币</li>
+                <li>二手商品</li>
+                <li>特产馆</li>
+                <li>京东金融</li>
+                <li>拍卖</li>
+                <li>房产</li>
+            </ul>
+        </div>
+        <div class="col-xs-9">
+            <a href="" class="guanggao"><img src="img/sort/guangao1.jpg"></a>
+            <h3>热门品牌</h3>
+            <div class="row"  id="pinpai">
+                <div class="col-xs-4" v-for="pinpai in pinpais">
+                    <a href="">
+                        <img :src="pinpai.img">
+                        <p>{{pinpai.p}}</p>
+                    </a>
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+</div>
+<script src="js/swiper-4.2.6.min.js"></script>
+<script src="jquery-1.11.1.min.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
