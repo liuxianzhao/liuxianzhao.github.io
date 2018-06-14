@@ -1,0 +1,23 @@
+*{
+    padding: 0;margin: 0;
+}
+
+
+h1{
+    color: #000;
+}
+
+.header{
+    height: 300px;
+    background-color: cornflowerblue;
+}
+
+.main{
+    height: 300px;
+    background-color: aquamarine;
+}
+
+.footer{
+    height: 300px;
+    background-color: chartreuse
+}
