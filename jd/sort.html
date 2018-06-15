@@ -2,39 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>京东分类</title>
+    <title>京东-分类</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="bootstrap-3.3.4-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/swiper-4.2.6.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body class="sort">
-
-<div class="ad">
-    <div><span id="guanbi">X</span><p>点击打开京东APP购物</p><a href="">立即打开</a></div>
-</div>
-    <!--   导航-->
-   
     <nav>
         <ul>
-            <li><a href="home.html"><i class="fa fa-home"></i><span>首页</span></a></li>
-            <li><a href="sort.html" class="active"><i class="fa fa-list"></i><span>分类</span></a></li>
-            <li><a href=""><i class="fa fa-clock-o"><i class="hot"></i></i><span>觅Me</span></a></li>
+            <li><a href="index.html"><i class="fa fa-home"></i><span>首页</span></a></li>
+            <li><a href="sort.html" class="active"><i class="fa fa-navicon"></i><span class="active">分类</span></a></li>
+            <li><a href="me.html"><i class="fa fa-eercast"></i><span>觅Me</span><i class="hot"></i></a></li>
             <li><a href=""><i class="fa fa-shopping-cart"></i><span>购物车</span></a></li>
             <li><a href=""><i class="fa fa-user-o"></i><span>我的</span></a></li>
         </ul>
     </nav>
-<!--   搜索条-->
-
-    <div class="search">
+     <!--    搜索条-->
+    <div class="search clearfix">
         <div class="left">
             <i class="fa fa-qrcode"></i>
-            <span>扫阿扫</span>
+            <span>扫啊扫</span>
         </div>
         <div class="center">
-            <i class="fa fa-search"></i>
-            <i class="fa fa-microphone"></i>
+           <i class="fa fa-search"></i>
+           <i class="fa fa-microphone"></i>
             <input type="text" placeholder="华为荣耀8">
         </div>
         <div class="right">
@@ -42,65 +35,772 @@
             <span>消息</span>
         </div>
     </div>
+     <div class="main">
+         <div class="container-fluid">
+             <div class="row">
+                 <div class="col-xs-3">
+                     <ul>
+                         <li><a href="#" class="active">热门推荐</a></li>
+                         <li><a href="#">手机数码</a></li>
+                         <li><a href="#">家用电器</a></li>
+                         <li><a href="#">电脑办公</a></li>
+                         <li><a href="#">计生情趣</a></li>
+                         <li><a href="#">美妆护肤</a></li>
+                         <li><a href="#">个护清洁</a></li>
+                         <li><a href="#">汽车用品</a></li>
+                         <li><a href="#">京东超市</a></li>
+                         <li><a href="#">男装</a></li>
+                         <li><a href="#">男鞋</a></li>
+                         <li><a href="#">女装</a></li>
+                         <li><a href="#">女鞋</a></li>
+                         <li><a href="#">母婴童装</a></li>
+                         <li><a href="#">运动户外</a></li>
+                         <li><a href="#">内衣配饰</a></li>
+                         <li><a href="#">食品生鲜</a></li>
+                         <li><a href="#">家具家装</a></li>
+                         <li><a href="#">箱包手袋</a></li>
+                         <li><a href="#">钟表珠宝</a></li>
+                         <li><a href="#">图书音像</a></li>
+                         <li><a href="#">医药保健</a></li>
+                         <li><a href="#">宠物生活</a></li>
+                         <li><a href="#">礼品鲜花</a></li>
+                         <li><a href="#">农资绿植</a></li>
+                         <li><a href="#">生活旅行</a></li>
+                         <li><a href="#">奢饰品</a></li>
+                         <li><a href="#">全球购</a></li>
+                         <li><a href="#">艺术邮币</a></li>
+                         <li><a href="#">二手商品</a></li>
+                         <li><a href="#">特产馆</a></li>
+                         <li><a href="#">京东金融</a></li>
+                         <li><a href="#">拍卖</a></li>
+                         <li><a href="#">房产</a></li>
+                     </ul>
+                 </div>
+                 <div class="col-xs-9 clerafix" id="remai">
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>热门分类</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>手机数码</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans1">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>家用电器</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans2">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>电脑办公</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>计生情趣</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>美妆护肤</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>个护清洁</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>汽车用品</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>京东超市</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>男装</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>男鞋</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>女装</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>女鞋</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>母婴童装</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>运动户外</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>内衣佩饰</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>食品生鲜</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>家具家装</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>箱包手袋</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>钟表珠宝</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>图书音像</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>医药保健</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>宠物生活</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>礼品鲜花</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>农资绿植</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>生活旅行</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>奢饰品</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>全球购</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>艺术邮币</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>二手商品</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>特产馆</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>京东金融</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>拍卖</h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="sort-list">
+                          <div class="top-pic">
+                              <a href=""><img src="images/sort/1/top.jpg" alt=""></a>
+                          </div>
+                          <div class="txt clearfix">
+                              <h4>房产 </h4>
+                              <a href=""><span><i class="fa fa-signal"></i>排行榜<i class="fa fa-angle-right"></i></span></a>
+                          </div>
+
+                          <div id="list-nav">
+                              <ul class="clearfix">
+                                  <li v-for="aee in tuijans">
+                                     <a href=""><img :src="aee.img" alt="">{{aee.name}}</a> 
+                                  </li>
+
+                              </ul>
+                          </div>
+                      </div>
+                      
+                      
+                  </div>
+             </div>
+         </div>
+     </div>
+      
+      <!--   回到顶部-->
+   <div class="gotop">
+       
+   </div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/swiper-4.2.6.min.js"></script>
+    <script src="js/vue.js"></script>
+       <script>
+        
+//        回到顶部
+        function smoothscroll(){
+            var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+            if (currentScroll > 0) {
+                 window.requestAnimationFrame(smoothscroll);
+                 window.scrollTo (0,currentScroll - (currentScroll/5));
+            }
+        }
+        
+        var gotop = document.querySelector(".gotop");
+        
+        window.addEventListener("scroll",function(){
+            if(document.body.scrollTop>1400){
+                gotop.style.opacity = "1";
+            }else{
+                gotop.style.opacity = "0";
+            }
+        });
+        
+        gotop.onclick = function(){
+            smoothscroll();
+        }
+        
+          
+    new Vue({
+        el:"#remai",
+        data:{
+            tuijans:[
+            {name:"电风扇",img:"images/sort/1/1.png"},
+            {name:"手机",img:"images/sort/1/2.jpg"},
+            {name:"空调",img:"images/sort/1/3.png"},
+            {name:"充电宝",img:"images/sort/1/4.png"},
+            {name:"蓝牙耳机",img:"images/sort/1/5.jpg"},
+            {name:"蚊帐",img:"images/sort/1/6.png"},
+            {name:"凉席",img:"images/sort/1/7.png"},
+            {name:"耳机",img:"images/sort/1/8.png"},
+            {name:"电饭煲",img:"images/sort/1/9.jpg"},
+            {name:"空调挂机",img:"images/sort/1/10.png"},
+            {name:"路由器",img:"images/sort/1/11.png"},
+            {name:"空风扇",img:"images/sort/1/12.png"},
+            {name:"男鞋",img:"images/sort/1/13.png"},
+            {name:"热水器",img:"images/sort/1/14.png"},
+            {name:"防晒",img:"images/sort/1/15.jpg"}
+            ],
+            tuijans1:[
+            {name:"小米",img:"images/sort/2/1.png"},
+            {name:"华为",img:"images/sort/2/2.jpg"},
+            {name:"荣耀",img:"images/sort/2/3.jpg"},
+            {name:"iPhone",img:"images/sort/2/4.jpg"},
+            {name:"vivo",img:"images/sort/2/5.png"},
+            {name:"OPPO",img:"images/sort/2/6.png"},
+            {name:"魅族",img:"images/sort/2/7.jpg"},
+            {name:"三星",img:"images/sort/2/8.png"},
+            {name:"一加",img:"images/sort/2/9.jpg"},
+            {name:"360手机",img:"images/sort/2/10.jpg"},
+            {name:"锤子手机",img:"images/sort/2/11.jpg"},
+            {name:"努比亚",img:"images/sort/2/12.jpg"},
+            {name:"老人机",img:"images/sort/2/13.jpg"},
+            {name:"手机",img:"images/sort/2/14.jpg"},
+            {name:"全面屏手机",img:"images/sort/2/15.jpg"}
+            ],
+            tuijans2:[
+            {name:"电水壶/热水壶",img:"images/sort/3/1.jpg"},
+            {name:"电压力锅",img:"images/sort/3/2.jpg"},
+            {name:"电饭煲",img:"images/sort/3/3.jpg"},
+            {name:"电磁炉",img:"images/sort/3/4.jpg"},
+            {name:"微波炉",img:"images/sort/3/5.jpg"},
+            {name:"电饼铛",img:"images/sort/3/6.jpg"},
+            {name:"豆浆机",img:"images/sort/3/7.jpg"},
+            {name:"多用途锅",img:"images/sort/3/8.jpg"},
+            {name:"料理机",img:"images/sort/3/9.jpg"},
+            {name:"榨汁机/原汁机",img:"images/sort/3/10.jpg"},
+            {name:"电烤箱",img:"images/sort/3/11.jpg"},
+            {name:"养生壶/煎药壶",img:"images/sort/3/12.jpg"},
+            {name:"电炖锅",img:"images/sort/3/13.jpg"},
+            {name:"电烧烤炉",img:"images/sort/3/14.jpg"},
+            {name:"电热饭盒",img:"images/sort/3/15.jpg"}
+            ]
+        }
+    })
     
-<div class="main">
-    <div class="row">
-        <div class="col-xs-3">
-            <ul>
-                <li class="active">热门推荐</li>
-                <li>手机数码</li>
-                <li>家用电器</li>
-                <li>电脑办公</li>
-                <li>计生情趣</li>
-                <li>美妆护肤</li>
-                <li>个护清洁</li>
-                <li>汽车用品</li>
-                <li>京东超市</li>
-                <li>男装</li>
-                <li>男鞋</li>
-                <li>女装</li>
-                <li>女鞋</li>
-                <li>母婴童装</li>
-                <li>户外运动</li>
-                <li>内衣配饰</li>
-                <li>食品生鲜</li>
-                <li>家居家装</li>
-                <li>箱包手袋</li>
-                <li>钟表珠宝</li>
-                <li>图书音像</li>
-                <li>医药保健</li>
-                <li>宠物生活</li>
-                <li>礼品鲜花</li>
-                <li>农资绿植</li>
-                <li>生活旅行</li>
-                <li>奢侈品</li>
-                <li>全球购</li>
-                <li>艺术邮币</li>
-                <li>二手商品</li>
-                <li>特产馆</li>
-                <li>京东金融</li>
-                <li>拍卖</li>
-                <li>房产</li>
-            </ul>
-        </div>
-        <div class="col-xs-9">
-            <a href="" class="guanggao"><img src="img/sort/guangao1.jpg"></a>
-            <h3>热门品牌</h3>
-            <div class="row"  id="pinpai">
-                <div class="col-xs-4" v-for="pinpai in pinpais">
-                    <a href="">
-                        <img :src="pinpai.img">
-                        <p>{{pinpai.p}}</p>
-                    </a>
-                </div>
-            </div>
-           </div>
-        </div>
-    </div>
-</div>
-<script src="js/swiper-4.2.6.min.js"></script>
-<script src="jquery-1.11.1.min.js"></script>
-<script src="js/vue.js"></script>
-<script src="js/script.js"></script>
+    //==================================
+        var left_list = document.querySelectorAll(".sort .main .col-xs-3 ul li");
+        var right_list = document.querySelectorAll(".sort .main #remai .sort-list");
+        right_list[0].style.display = "block";
+        for(var i=0;i<left_list.length;i++){
+            left_list[i].index = i;
+            left_list[i].onclick = function(){
+                for(var j=0;j<right_list.length;j++){
+                    left_list[j].children[0].setAttribute("class","");
+                    right_list[j].style.display = "none";
+                }
+                this.children[0].setAttribute("class","active");
+                right_list[this.index].style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>

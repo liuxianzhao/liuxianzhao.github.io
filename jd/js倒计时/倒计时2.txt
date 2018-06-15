@@ -1,0 +1,24 @@
+//首页京东秒杀部分的效果（倒计时）
+
+var zxx = {
+    $: function(id){
+        return document.getElementById(id);
+    },
+    futureDate: Date.UTC(2018, 5, 1, 8),
+    obj: function(){
+        return {
+            sec: zxx.$("sec"),
+            mini: zxx.$("mini"),
+            hour: zxx.$("hour"),
+            day: zxx.$("day"),
+            month: zxx.$("month"),
+            year: zxx.$("year")
+        }
+    }
+};
+fnTimeCountDown(zxx.futureDate, zxx.obj());
+
+
+
+html调用方式
+<span id="hour">00</span> 
