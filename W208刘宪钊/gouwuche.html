@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper-4.2.6.min.css">
+    <link rel="stylesheet" href="css/字体图标离线文档/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="gouwuche">
+    <!--nav-->
+    <div class="nav">
+        <ul>
+            <li><a href="home.html"><i class="fa fa-home"></i><span class="active">首页</span></a></li>
+            <li><a href="fenlei.html"><i class="fa fa-navicon"></i><span>分类</span></a></li>
+            <li><a href="gouwuche.html" class="active"><i class="fa fa-shopping-cart"></i><span>购物车</span></a></li>
+            <li><a href="wode.html"><i class="fa fa-user-o"></i><span>我的</span></a></li>
+        </ul>
+    </div>
+
+
+    <!--gouwuche-->
+    <div class="gouwuche">
+        <div class="gou-biao">
+            <h2>购物车</h2>
+        </div>
+        <div class="gou text-center">
+            <img src="img/gouwuche/gouwuche.jpg" alt="">
+            <p>购物车还是空的，去购物吧!</p>
+            <ul class="gou-ul">
+                <li><a href="">随便逛逛</a></li>
+                <li><a href="">我的收藏</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <!--weinituijian-->
+    <div class="tuijian" id="haha">
+        <div class="container">
+            <div class="top-biao">
+                <div class="row">
+                    <div class="col-xs-5"><img src="img/shouye/zixuan/biaotihengxian.jpg" alt=""></div>
+                    <div class="col-xs-2 text"><p>为你推荐</p></div>
+                    <div class="col-xs-5"><img src="img/shouye/zixuan/biaotihengxian.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6" v-for="aee in arr3">
+                <a href=""><img :src="aee.img" alt=""></a>
+                <span>{{aee.jia}}</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!--fan-->
+    <div class="fan"></div>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/swiper-4.2.6.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper-4.2.6.min.css">
+    <link rel="stylesheet" href="css/字体图标离线文档/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="wode1">
+    <!--nav-->
+    <div class="nav">
+        <ul>
+            <li><a href="home.html"><i class="fa fa-home"></i><span class="active">首页</span></a></li>
+            <li><a href="fenlei.html"><i class="fa fa-navicon"></i><span>分类</span></a></li>
+            <li><a href="gouwuche.html"><i class="fa fa-shopping-cart"></i><span>购物车</span></a></li>
+            <li><a href="wode.html" class="active"><i class="fa fa-user-o"></i><span>我的</span></a></li>
+        </ul>
+    </div>
+
+
+    <!--wode-->
+    <div class="wode">
+        <div class="wode-biao">
+            <h2>我的</h2>
+        </div>
+        <div class="wode-center text-center">
+            <p>欢迎来到6688</p>
+            <a href="">登录/注册</a>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 wode-pic">
+                <img src="img/wode/myOrder.png" alt="">
+                <p>我的订单</p>
+                <i class="fa fa-angle-right"></i>
+            </div>
+            <div class="col-xs-12 wode-pic">
+                <img src="img/wode/myHistoryOrder.png" alt="">
+                <p>历史订单</p>
+                <i class="fa fa-angle-right"></i>
+            </div>
+            <div class="col-xs-12 wode-pic">
+                <img src="img/wode/myConcern.png" alt="">
+                <p>我的关注</p>
+                <i class="fa fa-angle-right"></i>
+            </div>
+            <div class="col-xs-12 wode-pic">
+                <img src="img/wode/myAddress.png" alt="">
+                <p>我的地址</p>
+                <i class="fa fa-angle-right"></i>
+            </div>
+            <div class="col-xs-12 wode-pic">
+                <img src="img/wode/myAccount.png" alt="">
+                <p>我的账户</p>
+                <i class="fa fa-angle-right"></i>
+            </div>
+            <div class="col-xs-12 wode-pic">
+                <img src="img/wode/helpCenter.png" alt="">
+                <p>帮助中心</p>
+                <i class="fa fa-angle-right"></i>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!--weinituijian-->
+    <div class="tuijian" id="haha">
+        <div class="container">
+            <div class="top-biao">
+                <div class="row">
+                    <div class="col-xs-5"><img src="img/shouye/zixuan/biaotihengxian.jpg" alt=""></div>
+                    <div class="col-xs-2 text"><p>为你推荐</p></div>
+                    <div class="col-xs-5"><img src="img/shouye/zixuan/biaotihengxian.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6" v-for="aee in arr3">
+                <a href=""><img :src="aee.img" alt=""></a>
+                <span>{{aee.jia}}</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!--fan-->
+    <div class="fan"></div>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/swiper-4.2.6.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
