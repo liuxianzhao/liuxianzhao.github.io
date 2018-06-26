@@ -13,8 +13,54 @@ a{
 
 a:hover{
     text-decoration: none;
-    /*color: #555555;*/
+    color: #555555;
 }
+
+
+
+
+/*tanchuang*/
+
+body{
+    position: relative;
+}
+
+.tanchuang{
+    display: block;
+    width: 100%;
+    background-color:rgba(0,0,0,0.5);
+    position: absolute;
+    z-index: 149;
+}
+
+.tanchuang img{
+    width: 80%;
+    height: 40%;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    z-index: 150;
+    animation: tan 2s;
+}
+
+@keyframes tan{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+.tanchuang .fa{
+    color: #fff;
+    position: absolute;
+    right: 5%;
+    top: 3%;
+    font-size: 20px;
+}
+
 
 
 /*header*/
@@ -56,10 +102,14 @@ a:hover{
     z-index: 1;
 }
 
+.xiaoxi{
+    padding: 0;
+}
+
 .xiaoxi i{
     font-size: 30px;
     color: #fff;
-    padding-top: 5px;
+    padding-top: 7px;
 }
 
 
@@ -213,12 +263,12 @@ a:hover{
 /*fan*/
 .fan {
     background-image: url(../img/shouye/zixuan/scroll-to-top-icon.png);
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-size: cover;
     position: fixed;
-    right: 30px;
-    bottom: 100px;
+    right: 20px;
+    bottom: 75px;
     z-index: 101;
     transition: 1s;
     opacity: 0;

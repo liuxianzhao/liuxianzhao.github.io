@@ -135,3 +135,14 @@ new Vue({
         ]
     }
 })
+
+
+//弹窗
+var tan = document.querySelector(".tanchuang");
+var cha = document.querySelector(".tanchuang .fa");
+tan.style.height = window.innerHeight+"px";
+cha.onclick = function(){
+    tan.style.display = "none";
+}
+
+
